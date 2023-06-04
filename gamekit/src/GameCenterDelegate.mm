@@ -433,7 +433,7 @@
 			//dmScript::LuaHBuffer luabuffer = { buffer, true };
 			dmScript::LuaHBuffer luabuffer;
 			luabuffer.m_Buffer = buffer;
-			luabuffer.m_AutoRelease = true;
+			luabuffer.m_Owner = dmScript::OWNER_LUA;
 
 			lua_newtable(L); // create lua table for image
 			dmScript::PushBuffer(L, luabuffer);
